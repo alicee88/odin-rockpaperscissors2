@@ -16,21 +16,36 @@
 <body>
     <h1>ROCK! PAPER! SCISSORS!</h1>
     <div class="container">
-        <div class="player rock">
+        <div>
+            <h2>Your score: <span class="player-score">0</span></h2>
+        </div>
+        <div>
+        </div>
+        <div>
+            <h2>My score: <span class="computer-score">0</span></h2>
+        </div>
+        <div id="rock" class="player">
             <a href="#"><img src="Rock.jpg"></a>
         </div>
-        <div class="score"></div>
+        <div>
+        </div>
         <div class="computer rock">
             <img src="Rock.jpg" alt="Rock">
         </div>
-        <div class="player paper">
+        <div id="paper" class="player">
             <a href="#"><img src="Paper.jpg"></a>
+        </div>
+        <div id="outcome">
+            <h2>Choose your move...</h2>
+            <button id="replay">REPLAY</button>
         </div>
         <div class="computer paper">
             <img src="Paper.jpg" alt="Paper">
         </div>
-        <div class="player scissors">
+        <div id="scissors" class="player">
             <a href="#"><img src="Scissors.jpg"></a>
+        </div>
+        <div>
         </div>
         <div class="computer scissors">
             <img src="Scissors.jpg" alt="scissors">

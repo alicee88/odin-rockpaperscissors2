@@ -1,7 +1,7 @@
 body {
     box-sizing: border-box;
     max-height: 100vh;
-    background-color: #ffc8dd;
+    background-color: #F4F1DE;
     font-family: Quicksand;
     margin: 0;
 }
@@ -9,7 +9,16 @@ body {
 h1 {
     text-align: center;
     margin: 0;
-    padding: 5rem;
+    padding: 3rem;
+    font-size: 50px;
+    color: #3D405B;
+    letter-spacing: 1rem;
+}
+
+h2 {
+    text-align: center;
+    margin: 0;
+    color: #3D405B;
 }
 
 .container {
@@ -20,7 +29,7 @@ h1 {
 }
 
 .score {
-    grid-row: span 3;
+    grid-row: span 4;
 }
 
 img {
@@ -29,5 +38,35 @@ img {
 }
 
 .player:hover {
-    box-shadow: 0 0 5px 5px #a2d2ff;
+    box-shadow: 0 0 5px 5px #E07A5F;
+}
+
+.selected {
+    box-shadow: 0 0 5px 5px #E07A5F;
+}
+
+#outcome {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#replay {
+    margin: auto;
+    opacity: 1;
+    padding: 15px 20px;
+    font-family: Quicksand, sans-serif;
+    letter-spacing: 0.25em;
+    background-color: #81B29A;
+    color: #3D405B;
+    border: 1px solid #3D405B;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    display: none;
+}
+
+#replay:hover {
+    box-shadow: 0 0 5px 5px #81B29A;
 }

@@ -5,87 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <title>Rock Paper Scissors</title>
 </head>
 
 <body>
-    <script>
-        function computerPlay() {
-            const random = Math.floor(Math.random() * 3);
-            switch (random) {
-                case 0:
-                    return "rock";
-                case 1:
-                    return "paper";
-                case 2:
-                    return "scissors";
-                default:
-                    return "Oh dear, computerPlay is returning the wrong thing";
-            }
-        }
+    <h1>ROCK! PAPER! SCISSORS!</h1>
+    <div class="container">
+        <div class="player rock">
+            <a href="#"><img src="Rock.jpg"></a>
+        </div>
+        <div class="score"></div>
+        <div class="computer rock">
+            <img src="Rock.jpg" alt="Rock">
+        </div>
+        <div class="player paper">
+            <a href="#"><img src="Paper.jpg"></a>
+        </div>
+        <div class="computer paper">
+            <img src="Paper.jpg" alt="Paper">
+        </div>
+        <div class="player scissors">
+            <a href="#"><img src="Scissors.jpg"></a>
+        </div>
+        <div class="computer scissors">
+            <img src="Scissors.jpg" alt="scissors">
+        </div>
 
-        function playRound(playerSelection, computerSelection) {
-            const endState = {
-                endString: "It's a draw!",
-                winner: ""
-            };
-
-            if (playerSelection === "rock") {
-                if (computerSelection === "paper") {
-                    endState.endString = "You lose! Paper beats Rock!";
-                    endState.winner = "computer";
-                }
-                else if (computerSelection === "scissors") {
-                    endState.endString = "You win! Rock beats Scissors!";
-                    endState.winner = "player";
-                }
-            }
-            else if (playerSelection === "paper") {
-                if (computerSelection === "rock") {
-                    endState.endString = "You win! Paper beats Rock!";
-                    endState.winner = "player";
-                }
-                else if (computerSelection === "scissors") {
-                    endState.endString = "You lose! Scissors beats Paper!";
-                    endState.winner = "computer";
-                }
-            }
-            else if (playerSelection === "scissors") {
-                if (computerSelection === "rock") {
-                    endState.endString = "You lose! Rock beats Scissors!";
-                    endState.winner = "computer";
-                }
-                else if (computerSelection === "paper") {
-                    endState.endString = "You win! Scissors beats Paper!";
-                    endState.winner = "player";
-                }
-            }
-            return endState;
-        }
-
-        function game() {
-            let computerWins = 0;
-            let playerWins = 0;
-
-            for (let i = 0; i < 5; i++) {
-                const playerGuess = prompt("Rock, Paper, or Scissors?").toLowerCase();
-                const computerGuess = computerPlay();
-                const roundResult = playRound(playerGuess, computerGuess);
-                console.log(roundResult.endString);
-                if (roundResult.winner === "player") playerWins++;
-                if (roundResult.winner === "computer") computerWins++;
-            }
-            console.log(`FINAL SCORE: You won ${playerWins}, I won ${computerWins}.`);
-            if (playerWins > computerWins)
-                console.log("You won the most games, well done!");
-            else if (playerWins < computerWins)
-                console.log("I won the most games, yay me!");
-            else
-                console.log("It was a draw, how boring.");
-        }
-
-        game();
-    </script>
+    </div>
 
 </body>
 

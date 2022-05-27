@@ -70,3 +70,15 @@ img {
 #replay:hover {
     box-shadow: 0 0 5px 5px #81B29A;
 }
+
+@media (max-width: 1300px) {
+    .container {
+        grid-template-columns: 15rem 15rem 15rem;
+    }
+}
+
+@media (max-width: 840px) {
+    .container {
+        grid-template-columns: 10rem 10rem 10rem;
+    }
+}
